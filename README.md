@@ -1,5 +1,9 @@
 # sourcemapcmd
 
+[![npm version](https://img.shields.io/npm/v/sourcemapcmd.svg)](https://www.npmjs.com/package/sourcemapcmd)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/anttiviljami/sourcemapcmd/blob/master/LICENSE)
+[![Buy me a coffee](https://img.shields.io/badge/donate-buy%20me%20a%20coffee-orange)](https://buymeacoff.ee/anttiviljami)
+
 Command line tool to resolve unminified references with source maps
 
 Usage:
