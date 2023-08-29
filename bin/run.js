@@ -6,10 +6,10 @@ const { SourceMapConsumer } = require("source-map");
 const chalk = require("chalk");
 const ora = require("ora");
 
-const main = async () => {
-  const command = yargs(hideBin(process.argv))
+const main = async (argv) => {
+  const command = yargs(hideBin(argv))
     .demand(2)
-    .usage(`npx sourcemapcmd <bundleURL> <line>:<column> [--verbose]`)
+    .usage('npx sourcemapcmd <bundleURL> <line>:<column> [--verbose]')
     .option("verbose", {
       alias: "v",
       type: "boolean",
@@ -27,7 +27,7 @@ const main = async () => {
     !position.includes?.(":")
   ) {
     command.showHelp();
-    process.exit(1);
+    return process.exit(1);
   }
 
   const [line, column] = position.split(":");
@@ -64,4 +64,8 @@ const main = async () => {
   console.log(JSON.stringify(originalPosition, null, 2));
 };
 
-main();
+if (require.main === module) {
+  main(process.argv);
+}
+
+module.exports = { main };
