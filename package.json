@@ -1,10 +1,11 @@
 {
-  "name": "resolve-sourcemap",
-  "version": "0.1.0",
+  "name": "sourcemapcmd",
+  "version": "0.1.1",
   "description": "CLI tool to resolve source map files",
   "main": "bin/run.js",
   "bin": {
-    "sourcemap": "bin/run.js"
+    "sourcemap": "bin/run.js",
+    "sourcemapcmd": "bin/run.js"
   },
   "scripts": {
     "test": "jest --passWithNoTests",
@@ -13,9 +14,7 @@
   "keywords": [
     "source map",
     "sourcemap",
-    "resolve source map",
-    "resolve-sourcemap",
-    "resolve-sourcemap-cli"
+    "cli"
   ],
   "author": "Viljami Kuosmanen <viljami@viljami.io>",
   "license": "MIT",
