@@ -37,7 +37,7 @@ const main = async () => {
 
   const sourceMapUrl = sourceMapURLObj.toString();
 
-  const verbose = argv.verbose || argv["v"];
+  const verbose = command.argv.verbose;
 
   const loading = ora(`Fetching source map ${sourceMapUrl}`).start();
 
