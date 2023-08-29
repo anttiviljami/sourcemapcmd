@@ -6,20 +6,23 @@ const { SourceMapConsumer } = require("source-map");
 const chalk = require("chalk");
 const ora = require("ora");
 
-const USAGE = `sourcemap <bundleURL> <line>:<column> [--verbose]`;
-
 const main = async () => {
-  const argv = yargs(hideBin(process.argv)).argv;
+  const command = yargs(hideBin(process.argv))
+    .demand(2)
+    .usage(`npx sourcemapcmd <bundleURL> <line>:<column> [--verbose]`)
+    .help();
 
-  const [bundleURL, position] = argv._;
+  const argv = command.argv;
+
+  const [bundleURL, position] = command.argv._;
 
   if (
     !bundleURL ||
     !position ||
-    !bundleURL.startsWith("http") ||
-    !position.includes(":")
+    !bundleURL.startsWith?.("http") ||
+    !position.includes?.(":")
   ) {
-    console.warn(`Usage: ${USAGE}`);
+    command.showHelp();
     process.exit(1);
   }
 

@@ -1,7 +1,7 @@
 {
   "name": "sourcemapcmd",
-  "version": "0.1.2",
-  "description": "CLI tool to resolve source map files",
+  "version": "1.0.0",
+  "description": "Command line tool to resolve source file references with source maps",
   "main": "bin/run.js",
   "bin": {
     "sourcemap": "bin/run.js",
