@@ -21,6 +21,7 @@
   "dependencies": {
     "chalk": "^4.0.0",
     "debug": "^4.3.4",
+    "node-fetch": "^3.3.2",
     "ora": "^5.0.0",
     "source-map": "^0.7.4",
     "yargs": "^17.7.2"

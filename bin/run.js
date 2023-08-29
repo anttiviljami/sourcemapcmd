@@ -5,18 +5,19 @@ const { hideBin } = require("yargs/helpers");
 const { SourceMapConsumer } = require("source-map");
 const chalk = require("chalk");
 const ora = require("ora");
+const fetch = require("node-fetch");
 
 const main = async (argv) => {
   const command = yargs(hideBin(argv))
     .demand(2)
-    .usage('npx sourcemapcmd <bundleURL> <line>:<column> [--verbose]')
+    .usage("npx sourcemapcmd <bundleURL> <line>:<column> [--verbose]")
     .option("verbose", {
       alias: "v",
       type: "boolean",
       description: "Verbose mode",
     })
-    .help('h')
-    .alias('h', 'help');
+    .help("h")
+    .alias("h", "help");
 
   const [bundleURL, position] = command.argv._;
 
