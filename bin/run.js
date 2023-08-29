@@ -10,9 +10,13 @@ const main = async () => {
   const command = yargs(hideBin(process.argv))
     .demand(2)
     .usage(`npx sourcemapcmd <bundleURL> <line>:<column> [--verbose]`)
-    .help();
-
-  const argv = command.argv;
+    .option("verbose", {
+      alias: "v",
+      type: "boolean",
+      description: "Verbose mode",
+    })
+    .help('h')
+    .alias('h', 'help');
 
   const [bundleURL, position] = command.argv._;
 

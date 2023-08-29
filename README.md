@@ -10,6 +10,11 @@ Usage:
 
 ```sh
 npx sourcemapcmd <bundleURL> <line>:<column> [--verbose]
+
+Options:
+      --version  Show version number                                   [boolean]
+  -v, --verbose  Verbose mode                                          [boolean]
+  -h, --help     Show help                                             [boolean]
 ```
 
 ## Example
